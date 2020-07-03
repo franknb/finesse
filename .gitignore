@@ -1,0 +1,7 @@
+# Current project
+**/*.ipynb_checkpoints/
+__pycache__/
+data/img/
+data/samples/
+data/models/
+
