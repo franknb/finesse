@@ -4,4 +4,4 @@ __pycache__/
 data/img/
 data/samples/
 data/models/
-
+.DS_Store
