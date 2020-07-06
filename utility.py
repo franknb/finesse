@@ -38,7 +38,7 @@ def trans(post):
             t = Translator()
         try:
             translations = t.translate(post.loc[i, 'en_comment'], dest='en')
-            post.loc[i, 'en_comment'] = translations.text.replace('\u200b', '')
+            post.loc[i, 'en_comment'] = translations.text.replace('\u200b', '').replace('\u200d', '')
         except:
             pass
         
@@ -56,9 +56,9 @@ def getdate2(datestring):
     d = datetime.datetime.strptime(datestring, '%Y-%m-%d %H:%M:%S')
     return d
 
-def findindex(df):
+def findindex(df, xticks):
     index = []
-    for i in np.arange(0,1.1,0.1):
+    for i in xticks:
         index.append(df.iloc[(df.username-i).abs().argsort()[:1]].index[0])
     return list(set(index))
 
