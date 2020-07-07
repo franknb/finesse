@@ -12,3 +12,5 @@ scikit-learn==0.22.2
 seaborn==0.10.1
 shap==0.35.0
 tqdm==4.45.0
+pytest-shutil==1.7.0
+requests==2.23.0
